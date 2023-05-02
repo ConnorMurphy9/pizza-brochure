@@ -5,11 +5,12 @@ const cors = require('cors');
 const routes = require('./controllers');
 const sequelize = require('./config/connection');
 const seedAll = require('./seeds/index');
+const path = require('path');
+
 // Start the server
 const PORT = process.env.PORT || 3001;
 
-// Import the route files
-app.use(routes);
+
 
 // Create an instance of the Express application
 const app = express();
@@ -18,6 +19,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
+// Import the route files
 app.use(routes);
 
 if (process.env.NODE_ENV === 'production') {

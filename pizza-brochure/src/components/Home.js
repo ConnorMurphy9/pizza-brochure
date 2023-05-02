@@ -7,7 +7,7 @@ function Home () {
             <h1>Home</h1>
 
             <div className="bg-img" style={{ backgroundImage: `url(${background})`}}>
-                Welcome to Connor's Pizzeria
+                Welcome to my Pizzeria!
             </div>
             
         </div>
