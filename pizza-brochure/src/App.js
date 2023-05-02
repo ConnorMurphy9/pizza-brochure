@@ -1,0 +1,36 @@
+import './App.css';
+
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './components/Home';
+import Menu from './components/Menu';
+import Checkout from './components/Checkout';
+import OrderHistory from './components/OrderHistory';
+import Navbar from './components/Navbar';
+import Login from './components/Login';
+
+function App() {
+  
+  return (
+    <div className="App">
+         <Router>
+        <div>
+         
+            <Navbar />
+            
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/Login" element={<Login />} />
+              <Route path="/OrderHistory" element={<OrderHistory />} />
+              <Route path="/Menu" element={<Menu />} />
+              <Route path="/Checkout" element={<Checkout />} />
+              {/* <Route path="/success" element={<OrderComplete />} /> */}
+            </Routes>
+          
+        </div>
+      </Router>
+    </div>
+  );
+}
+
+export default App;
